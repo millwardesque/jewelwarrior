@@ -1,0 +1,16 @@
+#game {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-device-width: 480px) {
+  #game {
+    font-size: 32px;
+  }
+}
+
+@media (min-device-width: 768px) {
+  #game {
+    font-size: 64px;
+  }
+}

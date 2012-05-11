@@ -1,0 +1,357 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_rsa",
+				"_rsa_pl_quote_field_first_value"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1419,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/screen.main-menu.js",
+			"settings":
+			{
+				"buffer_size": 628,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/loader.js",
+			"settings":
+			{
+				"buffer_size": 526,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/Chrome.sublime-build",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/mobile.css",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/index.html",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/loader.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.splash.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/game.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/dom.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/main.css",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/fontfaces.css",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/fonts/Slackey.ttf",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/sizzle.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/modernizr.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/untitled",
+		"/Users/christophermillward/Library/Application Support/Sublime Text 2/Packages/User/Chrome.sublime-build",
+		"/Users/christophermillward/Development/Personal/html5game.com/index.html",
+		"/Users/christophermillward/Development/Personal/html5game.com/css/main.css",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_pl_quote/rsa_pl_quote.module",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_pl_quote/fields/driver_licence/driver_licence.module",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/cgi_quote_fortus/leads_web_service/leads_web_service.stubdata.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/cgi_quote_fortus/leads_web_service/leads_web_service.admin.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/cgi_quote_fortus/leads_web_service/leads_web_service.module",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/rsa_contact/rsa_contact.module",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_quote_contact/rsa_quote_contact.module",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/themes/rsa_pl/template.php",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/libraries/ckeditor/_samples/output_html.html",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/themes/rsa_pl/css/ie7.css",
+		"/private/etc/hosts",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/cgi_quote_fortus/leads_web_service/leads_web_service.classes.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_pl_quote/rsa_pl_quote.fortus.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_pl_quote/rsa_pl_quote.leads.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_pl_quote/fields/driver_licence/driver_licence.info",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_pl_quote/fields/driver_licence/driver_licence.install",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_pl_quote/rsa_pl_quote.home.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/contrib/devel/devel.module",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_broker_feature/rsa_broker_feature.views_default.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/cgi_quote_fortus/cgi_quote_fortus.install",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/cgi_quote/cgi_quote.module",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/cgi_quote_profile/cgi_quote_profile.module",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_pl_quote/rsa_pl_quote.auto.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/themes/rsa_pl/css/fields.css",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/cgi_quote/cgi_quote.pages.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/modules/custom/rsa_pl_quote/fields/cgi_date/cgi_quote_date.module",
+		"/Users/christophermillward/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/christophermillward/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/README.txt",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/carinsurance.ca/themes/rsa_carinsurance/template.php",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom/cgi_quote_fortus/cgi_quote_fortus.classes.inc",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/local.common.settings.php",
+		"/Applications/MAMP/bin/php/php5.3.6/conf/php.ini",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/settings.php",
+		"/Applications/MAMP/logs/php_error.log",
+		"/Applications/MAMP/logs/apache_error.log",
+		"/Users/christophermillward/Dropbox/InBox/rsa/rsa-local.common.settings.php",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/rsaquote.ca/local.settings.php",
+		"/Users/christophermillward/Dropbox/InBox/rsa/rsaquote-local.settings.php",
+		"/Users/christophermillward/Dropbox/InBox/rsa/johnson-settings.php",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/johnson.ca/settings.php",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/condogold.ca/settings.php",
+		"/Users/christophermillward/Dropbox/InBox/rsa/condogold-settings.php",
+		"/Users/christophermillward/Dropbox/InBox/rsa/carinsurance-settings.php",
+		"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/carinsurance.ca/settings.php",
+		"/Users/christophermillward/Downloads/mxcl-homebrew-05299a4/bin/brew"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/contrib/devel",
+			"/Users/christophermillward/Development/CGI/RSA/rsa_drupal/sites/all/modules/custom",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"dsm",
+			"_html(",
+			"#driver_licence_conditional",
+			"LeadsDriver",
+			"continuous",
+			"contin",
+			"license",
+			"$years_insured",
+			"LICENCE_FIELD_G1_LICENCE",
+			"dpm",
+			"dsm",
+			"function dpm",
+			"options",
+			"requirements",
+			"cgi_quote_recalculate_quote",
+			"rsa_pl_options",
+			"dsm",
+			"item_value",
+			"dsm",
+			"alter",
+			"kickout",
+			"cgi_quote_load_from_cookie_page",
+			"resume",
+			"cookie",
+			"rsa_driver_licence_info_validate",
+			"inline",
+			"item_driver_licence_traffic_convictions = ",
+			"_driver_licence_setdata\\((.*?),.*\\);",
+			"_driver_licence_setdata\\((.*)?,.*\\);",
+			"_driver_licence_setdata\\((.*),.*\\);",
+			"item_driver_licence_traffic_convictions",
+			"_driver_licence_setdata",
+			"function _driver_licence_setdata",
+			"block",
+			"int",
+			"number_format",
+			"$this->PREMIUM",
+			"premium",
+			"label",
+			"_rsa_pl_quote_build_driver_profile",
+			"contin",
+			"continu",
+			"contin",
+			"incident"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"isset($item['driver_licence_conditional'][\\1]) ? $item['driver_licence_conditional'][\\1] : NULL;",
+			"nothing",
+			"item_driver_licence_traffic_convictions",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								491,
+								491
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/screen.main-menu.js",
+					"settings":
+					{
+						"buffer_size": 628,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								255,
+								255
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/loader.js",
+					"settings":
+					{
+						"buffer_size": 526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								367,
+								367
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true
+}
