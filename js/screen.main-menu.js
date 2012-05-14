@@ -10,7 +10,7 @@ jewel.screens["main-menu"] = (function() {
     dom.bind("#main-menu ul.menu", "click", function(e) {
       if (e.target.nodeName.toLowerCase() === "button") {
         var action = e.target.getAttribute("name");
-        game.showScreen("action");
+        game.showScreen(action);
       }
     });
   }
