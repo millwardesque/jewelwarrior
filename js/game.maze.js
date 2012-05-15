@@ -2,6 +2,8 @@ jewel.game.maze = (function() {
   var game = jewel.game,
       dom = jewel.dom,
       board = [],
+      board_traversal = [], // Maps the user's traversal on the board
+      show_fog_of_war = true,
       rows = 8,
       columns = 8,
       current_position = {
@@ -46,6 +48,14 @@ jewel.game.maze = (function() {
   }
 
   /**
+   * Gets a random element from an array
+   */
+  function get_random_element(elements) {
+    var random_value = Math.round(Math.random() * (elements.length - 1));
+    return elements[random_value];
+  }
+
+  /**
    * Sets up a new game board
    */
   function setup() {
@@ -53,12 +63,15 @@ jewel.game.maze = (function() {
     current_position = { x: 0, y: 0 };
     end_position = { x: 0, y: 0 };
     board = [];
+    board_traversal = [];
 
     // Initialize the board
     for (var y = 0; y < rows; ++y) {
       board.push([]);
+      board_traversal.push([]);
       for (var x = 0; x < columns; ++x) {
         board[y].push(get_random_state());
+        board_traversal[y].push(false);
       }
     }
 
@@ -67,21 +80,30 @@ jewel.game.maze = (function() {
     end_position = get_random_position();
 
     // Ensure the start and end positions are different
-    while (start_position.x == end_position.x && start_position.y == end_position.y) {
+    while (isSamePosition(start_position, end_position)) {
       start_position = get_random_position();
       end_position = get_random_position();
     }
 
     board[start_position.y][start_position.x] = board_state.START;
     board[end_position.y][end_position.x] = board_state.FINISH;
+    board_traversal[start_position.y][start_position.x] = true;
     current_position = start_position;
 
-    // @ToDo: Add validation for a solvable maze
+    // Ensure the maze is solvable
+    var min_solution_length = 5;
     board_solution = solve();
     console.log(board_solution);
-    if (!board_solution || board_solution.length < 3) {
+    if (!board_solution || board_solution.length < min_solution_length) {
       setup();
     }
+  }
+
+  /**
+   * Returns true if two positions are equal
+   */
+  function isSamePosition(p1, p2) {
+    return (p1.x == p2.x && p1.y == p2.y);
   }
 
   /**
@@ -235,6 +257,7 @@ jewel.game.maze = (function() {
     // Attempt to move to the new square
     if (isOpenSquare(new_position)) {
       current_position = new_position;
+      board_traversal[new_position.y][new_position.x] = true;
     }
 
     // Check for endgame
@@ -256,7 +279,6 @@ jewel.game.maze = (function() {
       case board_state.OPEN:
       case board_state.START:
       case board_state.FINISH:
-      case board_state.TRAVERSED:
         return true;
 
       case board_state.BLOCKED:
@@ -268,6 +290,38 @@ jewel.game.maze = (function() {
 
     return false;
   }
+
+  /**
+   * Checks to see if a given square on the board is visible from the player's position
+   */
+  function isVisible(position) {
+    var y = position.y,
+        x = position.x,
+        is_visible = false;
+
+      var adjacent_positions = [
+        { x: x, y: y },
+        { x: x, y: y - 1 },
+        { x: x - 1, y: y },
+        { x: x + 1, y: y },
+        { x: x, y: y + 1 },
+      ];
+
+      // Check all adjacent squares to see if it's been traversed recentlys
+      for (var i = 0; i < adjacent_positions.length; ++i) {
+        var adj_x = adjacent_positions[i].x,
+            adj_y = adjacent_positions[i].y;
+
+        if (adj_x >= 0 && adj_x < columns &&
+            adj_y >= 0 && adj_y  < rows && 
+            board_traversal[adj_y][adj_x]) {
+          is_visible = true;
+          break;
+        }
+      }
+
+      return is_visible;
+    }
 
   /**
    * Returns true if the player has found the solution, else false
@@ -285,16 +339,24 @@ jewel.game.maze = (function() {
       board_separator += '####';
     }
     console.log(board_separator);
-
     for (var y = 0; y < rows; ++y) {
       var row_text = '';
       for (var x = 0; x < columns; ++x) {
         var state = board[y][x];
-        if (x == current_position.x && y == current_position.y) {
-          state = "[" + state + "]";
+
+        if (!isVisible({ x: x, y: y }) && show_fog_of_war) {
+          state = "   ";
+        }
+        else if (x == current_position.x && y == current_position.y) {
+          state = "[" + "@" + "]";
         }
         else {
-          state = " " + state + " ";
+          if (board_traversal[y][x]) {
+            state = "[" + state + "]";
+          }
+          else {
+            state = " " + state + " ";
+          }
         }
         row_text += state + " ";
       }
