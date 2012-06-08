@@ -28,6 +28,20 @@ body {
 }
 
 /**
+ * Install screen
+ */
+#install-screen {
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+#install-screen span {
+  font-size: 0.75em;
+  display: inline-block;
+  padding: 0 0.5em;
+}
+
+/**
  * Splash screen
  */
 #splash-screen {
