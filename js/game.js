@@ -4,6 +4,24 @@ jewel.game = (function() {
       $ = dom.$;
 
   /**
+   * Setup
+   */
+  function setup() {
+    // Disable native touchmove to prevent overscroll
+    dom.bind(document, "touchmove", function(event) {
+      event.preventDefault();
+    });
+
+    // Hide the address bar on Android
+    if (/Android/.test(navigator.userAgent)) {
+      $("html")[0].style.height = "200%";
+      setTimeout(function() {
+        window.scrollTo(0, 1);
+      }, 0);
+    }
+  }
+
+  /**
    * Hides the active screen (if any) and shows the requested screen
    */
    function showScreen(screenId) {
@@ -24,6 +42,7 @@ jewel.game = (function() {
 
   // Public members of the jewel.game object
   return {
+    setup: setup,
     showScreen: showScreen
   };
 })();

@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
       yep: "js/screen.splash.js",
       nope: "js/screen.install.js",
       complete: function() {
-
+        jewel.game.setup();
         if (Modernizr.standalone) {
           jewel.game.showScreen("splash-screen");
         }
