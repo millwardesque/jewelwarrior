@@ -14,11 +14,14 @@ window.addEventListener("load", function() {
         "js/screen.splash.js",
         "js/screen.main-menu.js",
         "js/screen.game-screen.js",
-        "js/game.maze.js"
+        "js/screen.about.js",
+        "js/game.maze.js",
+        "js/display.canvas.js"
       ],
 
       // Log the results of the load
       complete: function() {
+        jewel.display.run();
         jewel.game.showScreen("splash-screen");
       }
     }

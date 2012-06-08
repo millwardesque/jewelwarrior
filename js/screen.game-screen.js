@@ -16,6 +16,12 @@ jewel.screens['game-screen'] = (function() {
     dom.bind("#game-screen ul.menu", "click", function(e) {
       if (e.target.nodeName.toLowerCase() === "button") {
         var action = e.target.getAttribute("name");
+
+        if (action == "exit") {
+          game.showScreen("main-menu");
+          return;
+        }
+        
         game.maze.move(action);
         game.maze.print();
 

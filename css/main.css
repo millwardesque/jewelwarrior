@@ -92,3 +92,15 @@ ul.menu li button:active {
   color: rgb(255, 255, 0);
   background: rgb(30, 40, 0);
 }
+
+/**
+ * About
+ */
+#about {
+  padding-top: 1.0em;
+}
+
+#about .credits {
+  font-size: 0.8em;
+  text-align: center;
+}

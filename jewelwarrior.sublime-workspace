@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"adjacent",
+				"adjacent_positions"
+			],
+			[
 				"_rsa",
 				"_rsa_pl_quote_field_first_value"
 			]
@@ -12,38 +16,23 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"contents": "How to place content in the site structure?\n - ",
 			"settings":
 			{
-				"buffer_size": 1419,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/screen.main-menu.js",
-			"settings":
-			{
-				"buffer_size": 628,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/loader.js",
-			"settings":
-			{
-				"buffer_size": 526,
-				"line_ending": "Unix"
+				"buffer_size": 47,
+				"line_ending": "Unix",
+				"name": "How to place content in the site structure?"
 			}
 		}
 	],
 	"build_system": "Packages/User/Chrome.sublime-build",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -60,16 +49,24 @@
 	},
 	"file_history":
 	[
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/mobile.css",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/index.html",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/loader.js",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.splash.js",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/game.js",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/dom.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/main.css",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.game-screen.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/loader.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.about.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/game.maze.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/game.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/sizzle.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/display.canvas.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/renderer.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.main-menu.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/aStarSolver.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/game.tictactoe.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/mobile.css",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.splash.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/dom.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/fontfaces.css",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/fonts/Slackey.ttf",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/sizzle.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/modernizr.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/untitled",
 		"/Users/christophermillward/Library/Application Support/Sublime Text 2/Packages/User/Chrome.sublime-build",
@@ -141,6 +138,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"end_position",
+			"TRAVERS",
+			";",
+			"false",
 			"dsm",
 			"_html(",
 			"#driver_licence_conditional",
@@ -211,81 +212,23 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 1419,
+						"buffer_size": 47,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								491,
-								491
+								47,
+								47
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/screen.main-menu.js",
-					"settings":
-					{
-						"buffer_size": 628,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								255,
-								255
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/loader.js",
-					"settings":
-					{
-						"buffer_size": 526,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								367,
-								367
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "How to place content in the site structure?",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -342,11 +285,15 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/Users/christophermillward/Development/CGI/RSA/rsa.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": false,
