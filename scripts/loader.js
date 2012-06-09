@@ -1,5 +1,11 @@
 var jewel = { // Namespace for the engine
-  screens: {} // Screens in the game
+  screens: {}, // Screens in the game
+  settings: { // Default game settings
+    rows: 8,
+    cols: 8,
+    baseScore: 100,
+    numJewelTypes: 7
+  }
 };
 
 window.addEventListener("load", function() {
@@ -39,9 +45,10 @@ window.addEventListener("load", function() {
       {
         load: [
           "scripts/screen.main-menu.js",
+          "scripts/game.board.js",
           "scripts/screen.game-screen.js",
           "scripts/screen.about.js",
-          "scripts/game.maze.js",
+          
           "scripts/display.canvas.js"
         ]
       }
