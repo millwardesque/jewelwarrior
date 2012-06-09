@@ -13,14 +13,14 @@ window.addEventListener("load", function() {
     {
       // Load the following scripts
       load: [
-        "js/sizzle.js",
-        "js/dom.js",
-        "js/game.js",
+        "scripts/sizzle.js",
+        "scripts/dom.js",
+        "scripts/game.js",
       ]
     }, {
       test: Modernizr.standalone,
-      yep: "js/screen.splash.js",
-      nope: "js/screen.install.js",
+      yep: "scripts/screen.splash.js",
+      nope: "scripts/screen.install.js",
       complete: function() {
         jewel.game.setup();
         if (Modernizr.standalone) {
@@ -38,11 +38,11 @@ window.addEventListener("load", function() {
     Modernizr.load([
       {
         load: [
-          "js/screen.main-menu.js",
-          "js/screen.game-screen.js",
-          "js/screen.about.js",
-          "js/game.maze.js",
-          "js/display.canvas.js"
+          "scripts/screen.main-menu.js",
+          "scripts/screen.game-screen.js",
+          "scripts/screen.about.js",
+          "scripts/game.maze.js",
+          "scripts/display.canvas.js"
         ]
       }
     ]);
