@@ -56,6 +56,7 @@ body {
 #splash-screen .continue {
   cursor: pointer;
   font-size: 0.75em;
+  display: none;
 }
 
 .logo {
@@ -68,6 +69,24 @@ body {
   text-shadow: 0.03em 0.03em 0.03em rgb(255, 255, 0),
                -0.03em -0.03em 0.03em rgb(255, 255, 0),
                0.10em 0.15em 0.15em rgb(0, 0, 0);
+}
+
+/**
+ * Progress bar
+ */
+.progress {
+  margin: 0.5em auto;
+  width: 6em;
+  height: 0.5em;
+  border-radius: 0.5em;
+  overflow: hidden;
+  border: 1px solid rgb(200, 200, 100);
+}
+
+.progress .indicator {
+  background-color: rgb(200, 200, 100);
+  width: 0;
+  height: 100%;
 }
 
 /**
@@ -121,4 +140,18 @@ ul.menu li button:active {
 #about .credits {
   font-size: 0.8em;
   text-align: center;
+}
+
+/**
+ * Jewel sizes
+ */
+.jewel-size {
+  font-size: 40px;
+}
+
+#jewel-proto {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: -1000px;
 }

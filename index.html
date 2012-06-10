@@ -31,6 +31,8 @@
 
   <body>
     <div id="game">
+      <!-- Template for jewels so that we can detect the correct size -->
+      <div id="jewel-proto" class="jewel-size"></div>
       
       <!-- Installation screen for the game -->
       <div class="screen" id="install-screen">
@@ -43,6 +45,9 @@
       <!-- Splash screen for the game -->
       <div class="screen" id="splash-screen">
         <h1 class="logo">Jewel<br />Warrior</h1>
+        <div class="progress">
+          <div class="indicator"></div>
+        </div>
         <span class="continue">Click to continue</span>
       </div>
 

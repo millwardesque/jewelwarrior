@@ -33,9 +33,12 @@ jewel.game = (function() {
       dom.removeClass(activeScreen, "active");
     }
 
-    // Show the new screen
+    // Extract screen parameters from arguments
+    var args = Array.prototype.slice.call(arguments, 1);
+
+    // Run the screen module
     if (screen) {
-      screens[screenId].run();
+      jewel.screens[screenId].run.apply(jewel.screens[screenId], args);
       dom.addClass(screen, "active");
     }
   }

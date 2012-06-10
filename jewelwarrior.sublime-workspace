@@ -15,15 +15,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "How to place content in the site structure?\n - ",
-			"settings":
-			{
-				"buffer_size": 47,
-				"line_ending": "Unix",
-				"name": "How to place content in the site structure?"
-			}
-		}
 	],
 	"build_system": "Packages/User/Chrome.sublime-build",
 	"command_palette":
@@ -49,22 +40,26 @@
 	},
 	"file_history":
 	[
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/index.html",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/main.css",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.game-screen.js",
+		"/Users/christophermillward/Downloads/sample code/ch03/scripts/game.js",
+		"/Users/christophermillward/Downloads/sample code/ch03/scripts/loader.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/loader.js",
+		"/Users/christophermillward/Downloads/sample code/ch03/examples/01-standalone.html",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/game.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/main.css",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/index.html",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/dom.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.install.js",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/mobile.css",
+		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.game-screen.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.about.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/game.maze.js",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/game.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/sizzle.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/display.canvas.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/renderer.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.main-menu.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/aStarSolver.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/game.tictactoe.js",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/mobile.css",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/screen.splash.js",
-		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/dom.js",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/css/fontfaces.css",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/fonts/Slackey.ttf",
 		"/Users/christophermillward/Development/Personal/jewelwarrior.com/js/modernizr.js",
@@ -207,35 +202,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"settings":
-					{
-						"buffer_size": 47,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								47,
-								47
-							]
-						],
-						"settings":
-						{
-							"auto_name": "How to place content in the site structure?",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
