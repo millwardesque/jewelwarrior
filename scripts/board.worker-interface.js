@@ -3,6 +3,8 @@
  */
 jewel.board = (function() {
   var dom = jewel.dom,
+      rows,
+      cols,
       settings,
       jewels,
       worker,
