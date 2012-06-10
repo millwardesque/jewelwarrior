@@ -10,7 +10,7 @@ addEventListener("message", function(event) {
       message = event.data;
 
   // Process the message command
-  switch (message.commmand) {
+  switch (message.command) {
     case "initialize":
       jewel.settings = message.data;
       board.initialize(callback);
@@ -36,7 +36,7 @@ addEventListener("message", function(event) {
     postMessage({
       id: message.id,
       data: data,
-      jewels: board.getBoard(),
+      jewels: board.getBoard()
     });
   }
-})
+}, false);

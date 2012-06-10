@@ -53,10 +53,7 @@ window.addEventListener("load", function() {
       {
         load: [
           "scripts/screen.main-menu.js",
-          "scripts/game.board.js",
-          "scripts/screen.game-screen.js",
           "scripts/screen.about.js",
-          "scripts/display.canvas.js"
         ]
       }, {
         test: Modernizr.webworkers,
@@ -64,7 +61,7 @@ window.addEventListener("load", function() {
           "scripts/board.worker-interface.js",
           "preload!scripts/board.worker.js"
         ],
-        nope: "scripts/board.js"
+        nope: "scripts/game.board.js"
       }
     ]);
   }

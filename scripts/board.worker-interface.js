@@ -3,9 +3,9 @@
  */
 jewel.board = (function() {
   var dom = jewel.dom,
+      settings,
       rows,
       cols,
-      settings,
       jewels,
       worker,
       messageCount,
@@ -31,8 +31,6 @@ jewel.board = (function() {
    * Handles messages sent from the worker thread
    */
   function messageHandler(event) {
-    console.log(event.data);
-
     var message = event.data;
     jewels = message.jewels;
 
