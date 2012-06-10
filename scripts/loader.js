@@ -14,6 +14,14 @@ window.addEventListener("load", function() {
     return (window.navigator.standalone != false);
   });
 
+  /**
+   * Adds preloading to yepnope
+   */
+  yepnope.addPrefix("preload", function(resource) {
+    resource.noexec = true;
+    return resource;
+  });
+
   // Loading stage 1
   Modernizr.load([
     {
@@ -48,9 +56,15 @@ window.addEventListener("load", function() {
           "scripts/game.board.js",
           "scripts/screen.game-screen.js",
           "scripts/screen.about.js",
-          
           "scripts/display.canvas.js"
         ]
+      }, {
+        test: Modernizr.webworkers,
+        yep: [
+          "scripts/board.worker-interface.js",
+          "preload!scripts/board.worker.js"
+        ],
+        nope: "scripts/board.js"
       }
     ]);
   }

@@ -306,7 +306,6 @@ jewel.board = (function() {
   }
 
   return {
-    canSwap: canSwap,
     initialize: initialize,
     print: print,
     getBoard: getBoard,
