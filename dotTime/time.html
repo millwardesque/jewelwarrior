@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>.time</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/fontfaces.css" />
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-device-width: 768px) and (orientation: portrait), 
+                                                        screen and (max-device-width: 1024px) and (orientation: landscape)" />
+
+    <!-- Home screen icons -->
+    <link rel="apple-touch-icon-precomposed" href="images/ios-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/ios-icon-ipad.png" sizes="72x72" />
+    <link rel="apple-touch-icon-precomposed" href="images/ios-icon-iphone4.png" sizes="114x114" />
+
+    <!-- Startup images -->
+    <link rel="apple-touch-startup-image" href="images/ios-startup-748x1024.png" media="screen and (min-device-width: 768px) and (orientation: landscape)" />
+    <link rel="apple-touch-startup-image" href="images/ios-startup-768-1004.png" media="screen and (min-device-width: 768px) and (orientation: portrait)" />
+    <link rel="apple-touch-startup-image" href="images/ios-startup-320x460.png" media="screen and (max-device-width: 320px)" />
+
+    
+    <!-- Style the iOS status bar -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <script src="scripts/modernizr.js"></script>
+    <script src="scripts/loader.js"></script>
+  </head>
+
+  <body>
+    <div id="game">
+      <div class="background"></div>
+      
+      <!-- Installation screen for the game -->
+      <div class="screen" id="install-screen">
+        <h1 class="logo">.time</h1>
+        <span>
+          Click the <img src="images/install-icon.png" alt="Install icon" /> button to install the game to your home screen.
+        </span>
+      </div>
+
+      <!-- Splash screen for the game -->
+      <div class="screen" id="splash-screen">
+        <h1 class="logo">.time</h1>
+        <div class="progress">
+          <div class="indicator"></div>
+        </div>
+        <span class="continue">Click to continue</span>
+      </div>
+
+      <!-- About screen for the game -->
+      <div class="screen" id="about">
+        <h1 class="logo">.time</h1>
+        <p class="credits">
+          Created, programmed, and loved by Christopher Millward<br />
+          TBD Games &copy;2012
+        </p>
+        <ul class="menu">
+          <li><button name="main-menu">Return</button></li>
+        </ul>
+      </div>      
+      
+      <!-- Menu screen for the game -->
+      <div class="screen" id="main-menu">
+        <h2 class="logo">.time</h2>
+        <ul class="menu">
+          <li><button name="game-screen">Play</button></li>
+          <li><button name="highscore">High scores</button></li>
+          <li><button name="about">About</button></li>
+          <li><button name="splash-screen">Exit</button></li>
+        </ul>
+      </div>
+
+      <!-- In-game screen for the game -->
+      <div class="screen" id="game-screen">
+        <div class="game-viewport">
+        </div>
+      </div>
+
+      <div class="screen" id="high-scores"></div>
+    </div>
+  </body>
+</html>

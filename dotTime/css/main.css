@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-tap-hightlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none;
+}
+
+#game {
+  font-family: Geo;
+  font-size: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24em;
+  height: 12em;
+  background-color: rgb(30, 30, 30);
+
+  color: rgb(200, 200, 100);
+}
+
+#game .background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#game .background canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#game .screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10;
+}
+
+#game .screen.active {
+  display: block;
+}
+
+/**
+ * Install screen
+ */
+#install-screen {
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+#install-screen span {
+  font-size: 0.75em;
+  display: inline-block;
+  padding: 0 0.5em;
+}
+
+/**
+ * Splash screen
+ */
+#splash-screen {
+  text-align: center;
+  padding-top: 2.5em;
+}
+
+#splash-screen .continue {
+  cursor: pointer;
+  font-size: 0.75em;
+  display: none;
+}
+
+.logo {
+  font-family: Slackey;
+  font-size: 1.5em;
+  line-height: 0.9em;
+  margin: 0;
+  text-align: center;
+  color: rgb(70, 120, 20);
+  text-shadow: 0.03em 0.03em 0.03em rgb(255, 255, 0),
+               -0.03em -0.03em 0.03em rgb(255, 255, 0),
+               0.10em 0.15em 0.15em rgb(0, 0, 0);
+}
+
+/**
+ * Progress bar
+ */
+.progress {
+  margin: 0.5em auto;
+  width: 6em;
+  height: 0.5em;
+  border-radius: 0.5em;
+  overflow: hidden;
+  border: 1px solid rgb(200, 200, 100);
+}
+
+.progress .indicator {
+  background-color: rgb(200, 200, 100);
+  width: 0;
+  height: 100%;
+}
+
+/**
+ * Main menu
+ */
+#main-menu {
+  padding-top: 1.0em;
+}
+
+ul.menu {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: 0;
+}
+
+ul.menu li {
+  margin: 0.8em 0;
+}
+
+ul.menu li button {
+  font-family: Slackey, sans-serif;
+  font-size: 0.6em;
+  color: rgb(100, 120, 0);
+  width: 10em;
+  height: 1.5em;
+  background: rgb(10, 20, 0);
+  border: 0.1em solid rgb(255, 255, 0);
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0.2em 0.2em 0.3em rgb(0, 0, 0);
+  -moz-box-shadow: 0.2em 0.2em 0.3em rgb(0, 0, 0);
+  box-shadow: 0.2em 0.2em 0.3em rgb(0, 0, 0);
+}
+
+ul.menu li button:hover {
+  background: rgb(30, 40, 0);
+}
+
+ul.menu li button:active {
+  color: rgb(255, 255, 0);
+  background: rgb(30, 40, 0);
+}
+
+/**
+ * Game screen
+ */
+#game-screen .game-board {
+  position: relative;
+  width: 8em;
+  height: 8em;
+}
+
+#game-screen .game-board .board-bg,
+#game-screen .game-board .board {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#game-screen .game-board .board {
+  z-index: 10;
+}
+
+#game-screen .game-board .board-bg {
+  z-index: 0;
+}
+
+/**
+ * About
+ */
+#about {
+  padding-top: 1.0em;
+}
+
+#about .credits {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/**
+ * Jewel sizes
+ */
+.jewel-size {
+  font-size: 40px;
+}
+
+#jewel-proto {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: -1000px;
+}
