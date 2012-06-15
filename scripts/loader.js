@@ -77,6 +77,7 @@ window.addEventListener("load", function() {
       load: [
         "scripts/sizzle.js",
         "scripts/dom.js",
+        "loader!scripts/requestAnimationFrame.js",
         "scripts/game.js",
       ]
     }, {
