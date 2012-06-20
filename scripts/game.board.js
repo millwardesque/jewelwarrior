@@ -286,8 +286,30 @@ jewel.board = (function() {
   }
 
   function swap(x1, y1, x2, y2, callback) {
-    var tmp,
-        events;
+    var tmp, swap1, swap2
+        events = [];
+
+    // Prepare the swap events
+    swap1 = {
+      type: "move",
+      data: [{
+        type: getJewel(x1, y1),
+        fromX: x1, fromY: y1, toX: x2, toY: y2 
+      }, {
+        type: getJewel(x2, y2),
+        fromX: x2, fromY: y2, toX: x1, toY: y1
+      }]
+    }
+    swap2 = {
+      type: "move",
+      data: [{
+        type: getJewel(x2, y2),
+        fromX: x1, fromY: y1, toX: x2, toY: y2 
+      }, {
+        type: getJewel(x1, y1),
+        fromX: x2, fromY: y2, toX: x1, toY: y1
+      }]
+    }
 
     if (canSwap(x1, y1, x2, y2)) {
       // Swap the jewels

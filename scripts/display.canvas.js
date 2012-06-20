@@ -7,6 +7,7 @@ jewel.display = (function() {
       jewels,
       cursor,
       previousCycle,
+      animations = [],
       firstRun = true;
 
   /**
@@ -40,10 +41,61 @@ jewel.display = (function() {
    */
   function cycle(time) {
     renderCursor(time);
-    
+    renderAnimations(time, previousCycle);
+
     // Update animation tracking / timing data
     previousCycle = time;
     requestAnimationFrame(cycle);
+  }
+
+  /**
+   * Adds an animation to the active list
+   */
+  function addAnimation(runTime, fncs) {
+    var anim = {
+      runTime: runTime,
+      startTime: Date.now(),
+      pos: 0,
+      fncs: fncs
+    };
+
+    animations.push(anim);
+  }
+
+  function renderAnimations(time, lastTime) {
+    var anims = animations.slice(0),  // Copy the animation list
+        n = anims.length,
+        animTime,
+        anim,
+        i;
+
+    // Call before()
+    for (i = 0; i < n; ++i) {
+      anim = anims[i];
+      if (anim.fncs.before) {
+        anim.fncs.before(anim.pos);
+      }
+      anim.lastPos = anim.pos;
+      animTime = (lastTime - anim.startTime);
+      anim.pos = animTime / anim.runTime;
+      anim.pos = Math.max(0, Math.min(1, anim.pos));
+    }
+
+    animations = [];  // Empty the list
+
+    // Run the animation
+    for (i = 0; i < n; ++i) {
+      anim = anims[i];
+      anim.fncs.render(anim.pos, anim.pos - anim.lastPos);
+      if (anim.pos == 1) {
+        if (anim.fncs.done) {
+          anim.fncs.done();
+        }
+      }
+      else {
+        animations.push(anim);
+      }
+    }
   }
 
   /**
@@ -111,12 +163,26 @@ jewel.display = (function() {
   /**
    * Draws a jewel at a location on the board
    */
-  function drawJewel(type, x, y) {
+  function drawJewel(type, x, y, scale, rot) {
     var image = jewel.images["images/jewels" + jewelSize + ".png"];
+
+    ctx.save();
+    if (typeof scale !== "undefined" && scale > 0) {
+      ctx.beginPath();
+      ctx.rect(x, y, 1, 1);
+      ctx.clip();
+      ctx.translate(x + 0.5, y + 0.5);
+      ctx.scale(scale, scale);
+      if (rot) {
+        ctx.rotate(rot);
+      }
+      ctx.translate(-x - 0.5, -y - 0.5);
+    }
     ctx.drawImage(image,
       type * jewelSize, 0, jewelSize, jewelSize,
       x, y,
       1, 1);
+    ctx.restore();
   }
 
   /**
@@ -124,21 +190,35 @@ jewel.display = (function() {
    */
   function moveJewels(movedJewels, callback) {
     var n = movedJewels.length,
-        mover, i;
+        oldCursor = cursor;
+   
+    cursor = null;
 
-    // Clear each moved jewel
-    for (i = 0; i < n; ++i) {
-      mover = movedJewels[i];
-      clearJewel(mover.fromX, mover.fromY);
-    }
+    movedJewels.forEach(function(e) {
+      var x = e.fromX, y = e.fromY,
+          dx = e.toX - e.fromX,
+          dy = e.toY - e.fromY,
+          dist = Math.abs(dx) + Math.abs(dy);
 
-    // Draw the jewel in its new location
-    for (i = 0; i < n; ++i) {
-      mover = movedJewels[i];
-      drawJewel(mover.type, mover.toX, mover.toY);
-    }
-
-    callback();
+      addAnimation(200 * dist, {
+        before: function(pos) {
+          pos = Math.sin(pos * Math.PI / 2);
+          clearJewel(x + dx * pos, y + dy * pos);
+        },
+        render: function(pos) {
+          pos = Math.sin(pos * Math.PI / 2);
+          drawJewel(e.type, 
+            x + dx * pos, y + dy * pos
+          );
+        },
+        done: function() {
+          if (--n == 0) {
+            cursor = oldCursor;
+            callback();
+          }
+        }
+      });
+    });
   }
 
   /**
@@ -147,11 +227,27 @@ jewel.display = (function() {
   function removeJewels(removedJewels, callback) {
     var n = removedJewels.length;
 
-    for (var i = 0; i < n; ++i) {
-      clearJewel(removedJewels[i].x, removedJewels[i].y);
-    }
-
-    callback();
+    removedJewels.forEach(function(e) {
+      addAnimation(400, {
+        before: function() {
+          clearJewel(e.x, e.y);
+        },
+        render: function(pos) {
+          ctx.save();
+          ctx.globalAlpha = 1 - pos;
+          drawJewel(
+            e.type, e.x, e.y,
+            1 - pos, pos * Math.PI * 2
+          );
+          ctx.restore();
+        },
+        done: function() {
+          if (--n == 0) {
+            callback();
+          }
+        }
+      });
+    });
   }
 
   /**
@@ -192,7 +288,7 @@ jewel.display = (function() {
       ctx.save();
       ctx.globalCompositeOperation = "lighter";
       ctx.globalAlpha = 0.8 * t1;
-      drawJewel(jewels[x][y], x, y);
+      drawJewel(jewels[x][y], x, y, 1.1);
       ctx.restore();
     }
 
