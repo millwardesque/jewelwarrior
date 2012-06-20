@@ -285,8 +285,11 @@ jewel.board = (function() {
     return copy;
   }
 
+  /**
+   * Swaps two jewels
+   */
   function swap(x1, y1, x2, y2, callback) {
-    var tmp, swap1, swap2
+    var tmp, swap1, swap2,
         events = [];
 
     // Prepare the swap events
@@ -311,19 +314,22 @@ jewel.board = (function() {
       }]
     }
 
-    if (canSwap(x1, y1, x2, y2)) {
-      // Swap the jewels
-      tmp = getJewel(x1, y1);
-      jewels[x1][y1] = jewels[x2][y2];
-      jewels[x2][y2] = tmp;
+    if (isAdjacent(x1, y1, x2, y2)) {
+      events.push(swap1);
+      if (canSwap(x1, y1, x2, y2)) {
+        // Swap the jewels
+        tmp = getJewel(x1, y1);
+        jewels[x1][y1] = jewels[x2][y2];
+        jewels[x2][y2] = tmp;
 
-      // Check the board for a list of events
-      events = check();
+        // Check the board for a list of events
+        events = events.concat(check());
+      }
+     else {
+        events.push(swap2, {type : "badswap"});
+      }
 
       callback(events);
-    }
-    else {
-      callback(false);
     }
   }
 
